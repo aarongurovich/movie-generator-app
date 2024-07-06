@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aarongurovich/movie-generator-app/static/css/main.40ed8d53.css",
+    "main.js": "/aarongurovich/movie-generator-app/static/js/main.d7d02c65.js",
+    "static/js/453.5b3dd3c9.chunk.js": "/aarongurovich/movie-generator-app/static/js/453.5b3dd3c9.chunk.js",
+    "index.html": "/aarongurovich/movie-generator-app/index.html",
+    "main.40ed8d53.css.map": "/aarongurovich/movie-generator-app/static/css/main.40ed8d53.css.map",
+    "main.d7d02c65.js.map": "/aarongurovich/movie-generator-app/static/js/main.d7d02c65.js.map",
+    "453.5b3dd3c9.chunk.js.map": "/aarongurovich/movie-generator-app/static/js/453.5b3dd3c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40ed8d53.css",
+    "static/js/main.d7d02c65.js"
+  ]
+}
