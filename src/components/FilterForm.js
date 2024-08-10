@@ -3,12 +3,12 @@ import movieService from '../services/movieService';
 
 const FilterForm = ({ onFilter }) => {
   const [genres, setGenres] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState(''); 
   const [minYear, setMinYear] = useState('');
   const [maxYear, setMaxYear] = useState('');
   const [minRating, setMinRating] = useState('');
   const [providers, setProviders] = useState([]);
-  const [selectedProvider, setSelectedProvider] = useState('');
+  const [selectedProvider, setSelectedProvider] = useState(''); 
 
   useEffect(() => {
     const fetchGenresAndProviders = async () => {
@@ -38,9 +38,9 @@ const FilterForm = ({ onFilter }) => {
         <select
           value={selectedGenre}
           onChange={(e) => setSelectedGenre(e.target.value)}
-          className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline text-black"
         >
-          <option value="">Select Genre</option>
+          <option value="" disabled></option>
           {genres.map((genre) => (
             <option key={genre.id} value={genre.id}>
               {genre.name}
@@ -86,9 +86,9 @@ const FilterForm = ({ onFilter }) => {
         <select
           value={selectedProvider}
           onChange={(e) => setSelectedProvider(e.target.value)}
-          className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline text-black"
         >
-          <option value="">Select Provider</option>
+          <option value="" disabled></option>
           {providers.map((provider) => (
             <option key={provider.provider_id} value={provider.provider_id}>
               {provider.provider_name}
@@ -98,7 +98,7 @@ const FilterForm = ({ onFilter }) => {
       </div>
       <button
         type="submit"
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-6 rounded-md shadow-sm transition duration-200 ease-in-out"
       >
         Generate Movie
       </button>

@@ -19,10 +19,10 @@ const movieService = {
       'primary_release_date.lte': filters['primary_release_date.lte'],
       'vote_average.gte': filters['vote_average.gte'],
       with_watch_providers: filters.with_watch_providers,
-      watch_region: 'US', // Specify the region if needed
+      watch_region: 'US', 
     };
 
-    // Remove undefined params
+    
     Object.keys(params).forEach(key => params[key] === '' && delete params[key]);
 
     const response = await axios.get(`${BASE_URL}/discover/movie`, { params });
